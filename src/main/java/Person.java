@@ -15,30 +15,37 @@ public class Person {
 
 
     public boolean hasAge() {
+
         return age != 0;
     }
 
     public boolean hasAddress() {
+
         return address != null;
     }
 
     public String getName() {
+
         return name;
     }
 
     public String getSurname() {
+
         return surname;
     }
 
     public int getAge() {
+
         return age;
     }
 
     public String getAddress() {
+
         return address;
     }
 
     public void setAddress(String address) {
+
         this.address = address;
     }
 
@@ -49,9 +56,9 @@ public class Person {
     }
 
     public PersonBuilder newChildBuilder() {
-       return new PersonBuilder()
-               .setSurname(surname)
-               .setAddress(address);
+        return new PersonBuilder()
+                .setSurname(surname)
+                .setAddress(address);
     }
 
     @Override
@@ -68,15 +75,13 @@ public class Person {
                     ", address='" + address + '\'' +
                     '}';
         }
-        if (!hasAddress()){
+        if (!hasAddress()) {
             return "Person{" +
                     "name='" + name + '\'' +
                     ", surname='" + surname + '\'' +
                     ", age=" + age + '\'' +
                     '}';
-        }
-
-        else {
+        } else {
             return "Person{" +
                     "name='" + name + '\'' +
                     ", surname='" + surname + '\'' +

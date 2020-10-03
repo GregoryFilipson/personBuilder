@@ -16,7 +16,7 @@ public class PersonBuilder {
         return this;
     }
 
-    public PersonBuilder setAge(Integer age) {
+    public PersonBuilder setAge(int age) {
         this.age = age;
         return this;
     }
@@ -29,8 +29,11 @@ public class PersonBuilder {
 
 
     public Person build() {
-        if (name == null | surname == null | age < 0) {
+        if (age < 0) {
             throw new IllegalArgumentException();
+        }
+        if (name == null | surname == null) {
+            throw new IllegalStateException();
         }
         return new Person(name, surname, age, address);
     }

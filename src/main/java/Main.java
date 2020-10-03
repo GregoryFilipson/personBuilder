@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         Person player = new PersonBuilder()
                 .setName("Лионель")
                 .setSurname("Месси")
@@ -17,7 +17,7 @@ public class Main {
 
         try {
             new PersonBuilder().build();
-        } catch (IllegalArgumentException e) {
+        } catch (IllegalStateException e) {
             System.out.println("Не введено имя и/или фамилия человека!");
         }
 
